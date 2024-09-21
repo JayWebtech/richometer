@@ -54,6 +54,6 @@
   background-repeat: no-repeat;
 }
 .answer-btn{
-  word-break: break-word; /* Break long words onto the next line */
-  white-space: normal; /* Allow wrapping */
+  word-break: break-word;
+  white-space: normal;
 }

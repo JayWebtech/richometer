@@ -32,9 +32,6 @@ function Homepage() {
                 Take the Richometer Quiz
                 </Button>
               </Link>
-              {/* <Button className="bg-secondary border-0 hover:bg-secondary rounded-full py-7 px-10 shadow-none">
-                Explore Quotes
-              </Button> */}
             </div>
           </div>
         </motion.div>

@@ -18,9 +18,6 @@ function Navbar() {
             Take Test
           </Button>
         </Link>
-        {/* <Button className="bg-secondary border-0 hover:bg-secondary rounded-lg py-5 shadow-none">
-          Explore Quotes
-        </Button> */}
       </div>
     </div>
   );

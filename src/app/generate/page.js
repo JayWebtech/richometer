@@ -1,8 +1,7 @@
 "use client";
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
 import { toPng } from "html-to-image";
 import { LuLoader2 } from "react-icons/lu";
 import { Button } from "@/components/ui/button";
@@ -1604,8 +1603,6 @@ function page() {
       return;
     }
     const certificate = document.getElementById("certificate");
-
-    // Make the certificate visible for the download
     certificate.style.display = "block";
 
     toPng(certificate)
@@ -1619,7 +1616,6 @@ function page() {
         console.error("Failed to generate certificate:", err);
       })
       .finally(() => {
-        // Hide the certificate again after the download
         certificate.style.display = "none";
       });
   };
