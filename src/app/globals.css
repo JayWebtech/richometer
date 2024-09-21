@@ -2,26 +2,58 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@font-face {
+  font-family: "Rubik";
+  src: url("../../public/fonts/Rubik-Regular.ttf") format("truetype");
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@font-face {
+  font-family: "RubikLight";
+  src: url("../../public/fonts/Rubik-Light.ttf") format("truetype");
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+@font-face {
+  font-family: "RubikBold";
+  src: url("../../public/fonts/Rubik-SemiBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Millik";
+  src: url("../../public/fonts/Millik.ttf") format("truetype");
+}
+
+* {
+  font-family: "RubikLight";
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+  }
+}
+
+.homescreen{
+  background-image: url('../../public/img/bg.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+#certificate{
+  background-image: url('../../public/img/sprinkle.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.quotecard{
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.answer-btn{
+  word-break: break-word; /* Break long words onto the next line */
+  white-space: normal; /* Allow wrapping */
 }
