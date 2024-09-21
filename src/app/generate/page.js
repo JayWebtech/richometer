@@ -1582,6 +1582,9 @@ function page() {
         );
         setRoastMessage(positiveRoastMessages[randomIndex]);
         setIsExploding(true);
+        setTimeout(() => {
+          setIsExploding(false);
+        }, 3000);
       }
     }
   };
