@@ -1,18 +1,21 @@
 import "./globals.css";
-
+import Script from "next/script";
 
 export const metadata = {
   title: "Richometer",
-  description: "Quotiva is a personalized quote generator that allows you to create inspiring, customized quotes with your name and favorite themes or colors. Design unique, motivational messages tailored just for you!",
+  description:
+    "Find out if you're on the path to riches with just a few simple questions. Take the quiz now and see where your financial future is headed!",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-      className=""
-      >
+      <body className="">
         {children}
+        <Script
+          src="//pl24451842.cpmrevenuegate.com/83/fa/68/83fa685714f73bc0949b0333cb979098.js"
+          async
+        ></Script>
       </body>
     </html>
   );
