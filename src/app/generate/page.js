@@ -5,6 +5,8 @@ import { Input } from "@/components/ui/input";
 import { toPng } from "html-to-image";
 import { LuLoader2 } from "react-icons/lu";
 import { Button } from "@/components/ui/button";
+import Confetti from "react-confetti";
+import useWindowDimensions from "@/components/useWindowDimension";
 
 function page() {
   const questions = [
@@ -1547,6 +1549,7 @@ function page() {
     "You’re so savvy, even your calculator is taking notes! Just don’t forget to count your blessings!",
     "Congratulations! Your future is looking bright, just like those sunglasses you’ll need to wear on your yacht!",
   ];
+  const { width, height } = useWindowDimensions();
 
   const [quizQuestions, setQuizQuestions] = useState([]);
   const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -1554,6 +1557,7 @@ function page() {
   const [showResult, setShowResult] = useState(false);
   const [roastMessage, setRoastMessage] = useState("");
   const [userName, setUserName] = useState("");
+  const [isExploding, setIsExploding] = useState(false);
 
   useEffect(() => {
     const shuffledQuestions = shuffleArray(questions);
@@ -1577,6 +1581,7 @@ function page() {
           Math.random() * positiveRoastMessages.length
         );
         setRoastMessage(positiveRoastMessages[randomIndex]);
+        setIsExploding(true);
       }
     }
   };
@@ -1585,6 +1590,7 @@ function page() {
     setCurrentQuestion(0);
     setScore(0);
     setShowResult(false);
+    setIsExploding(false);
     const shuffledQuestions = shuffleArray(questions);
     setQuizQuestions(shuffledQuestions.slice(0, 10));
   };
@@ -1627,6 +1633,7 @@ function page() {
       exit={{ y: -300, opacity: 0 }}
       transition={{ duration: 1, ease: "easeInOut" }}
     >
+      {isExploding && <Confetti width={width} height={height} />}
       <div className="my-10 ring-2 ring-gray-100 bg-white p-4 lg:p-10 rounded-xl">
         {!showResult ? (
           <>
