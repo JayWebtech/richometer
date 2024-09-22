@@ -1731,6 +1731,7 @@ function page() {
                 >
                   Download Certificate
                 </Button>
+                <div id="container-3979a0af1ae179f684124b939478579e"></div>
               </>
             ) : (
               <>
@@ -1738,6 +1739,7 @@ function page() {
                   💸 {roastMessage}
                   💸
                 </div>
+                <div id="container-3979a0af1ae179f684124b939478579e"></div>
               </>
             )}
             <Button

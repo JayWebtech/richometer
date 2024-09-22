@@ -16,6 +16,7 @@ export default function RootLayout({ children }) {
           src="//pl24451842.cpmrevenuegate.com/83/fa/68/83fa685714f73bc0949b0333cb979098.js"
           async
         ></Script>
+        <Script async="async" data-cfasync="false" src="//pl24461142.cpmrevenuegate.com/3979a0af1ae179f684124b939478579e/invoke.js"></Script>
       </body>
     </html>
   );
